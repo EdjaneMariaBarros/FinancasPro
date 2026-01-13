@@ -10,8 +10,8 @@ export default function Signup() {
 
     const handleSignup = (e: React.FormEvent) => {
         e.preventDefault();
-        // Simulação de criação de conta
         if (name && email && password) {
+            localStorage.setItem("userName", name);
             alert("Conta criada com sucesso! Faça login.");
             navigate("/login");
         } else {

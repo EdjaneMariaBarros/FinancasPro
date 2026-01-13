@@ -10,9 +10,15 @@ export default function Login() {
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
-        // Simulação de validação de credenciais (RF-09)
         if (email && password) {
-            navigate("/dashboard"); // Sucesso redireciona para Dashboard
+        localStorage.setItem("isLogged", "true"); 
+        const nomeSalvo = localStorage.getItem("userName");
+        if (!nomeSalvo) {
+            const nomeDoEmail = email.split("@")[0];
+            localStorage.setItem("userName", nomeDoEmail);
+        }
+            navigate("/dashboard"); 
+            window.location.reload();
         } else {
             alert("Por favor, preencha todos os campos.");
         }

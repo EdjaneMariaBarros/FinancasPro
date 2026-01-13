@@ -1,13 +1,23 @@
-import { Link } from "react-router-dom";
+import {useState} from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
 export default function Dashboard() {
-  // Simulação de dados (Tickers conforme o Glossário) [cite: 76, 77]
+  const navigate = useNavigate();
+  const [busca, setBusca] = useState("");
+
   const acoesDestaque = [
     { ticker: "PETR4", preco: "R$ 38,50", variacao: "+1.2%" },
     { ticker: "MGLU3", preco: "R$ 2,15", variacao: "-0.5%" },
     { ticker: "VALE3", preco: "R$ 65,20", variacao: "+0.8%" },
   ];
+  const handleBusca = () => {
+    if (busca.trim()) {
+      navigate(`/results?q=${busca.toUpperCase()}`);
+    } else {
+      alert("Digite um ticker para buscar!");
+    }
+  };
 
   return (
     <main className="dashboard-container">
@@ -30,10 +40,18 @@ export default function Dashboard() {
       </section>
 
       <section className="actions-section">
-        <h2>Ações Rápidas (Must Have) [cite: 65]</h2>
-        <div className="button-group">
-          <button className="btn-primary" onClick={() => alert("Abrindo busca de ativos (RF-01)...")}>Buscar Ativo</button>
-          <Link to="/alerts" className="btn-secondary">Configurar Alerta (RF-07)</Link>
+        <h2>Ações Rápidas (Must Have)</h2>
+        <div className="button-group" search-box>
+          <input 
+          type="text"
+          placeholder="Ex:PETR4"
+          value={busca}
+          onChange={(e) => setBusca(e.target.value)}
+          className="search-input"
+          />
+          <button className="btn-primary" onClick={handleBusca}>Buscar Ativo</button>
+          <Link to="/alerts" className="btn-secondary">Configurar Alerta</Link>
+          <Link to="/portifolio" className="btn-portfolio">Meu Portfólio</Link>
         </div>
       </section>
     </main>

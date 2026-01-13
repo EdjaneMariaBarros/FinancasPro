@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import "./Recommendations.css";
 
+
 export default function Recommendations() {
-  // Dados baseados no Relatório (Sugestões personalizadas por IA)
   const sugestoesIA = [
     { ticker: "WEGE3", motivo: "Forte geração de caixa e histórico de dividendos crescentes.", confianca: "Alta" },
     { ticker: "ITUB4", motivo: "Setor bancário resiliente com projeção de altos proventos em 2026.", confianca: "Média-Alta" },
@@ -24,7 +25,9 @@ export default function Recommendations() {
               <span className="confidence-tag">{item.confianca}</span>
             </div>
             <p className="reason-text"><strong>Por que investir?</strong> {item.motivo}</p>
-            <button className="btn-details">Análise Completa</button>
+           <Link to={`/analysis/${item.ticker}`} className="btn-details">
+              Análise Completa
+            </Link>
           </div>
         ))}
       </section>

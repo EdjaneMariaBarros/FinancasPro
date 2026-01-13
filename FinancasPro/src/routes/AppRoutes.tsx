@@ -10,6 +10,7 @@ import Recommendations from "../pages/Recommendations/Recommendations";
 import Signup from "../pages/Signup/Signup";
 import Portifolio from "../pages/Portifolio/Portifolio";
 import Results from "../pages/Results/Results";
+import AnalysisDetail from "../pages/AnalysisDetail/AnalysisDetail";
 export default function AppRoutes(){
     return(
 
@@ -26,6 +27,7 @@ export default function AppRoutes(){
              <Route path="/signup" element={<Signup />} />
              <Route path="/portifolio" element={<Portifolio/>}/>
              <Route path="/results" element={<Results />} />
+             <Route path="/analysis/:ticker" element={<AnalysisDetail />} />
         </Routes>
     )
 }
