@@ -1,0 +1,19 @@
+.main-footer {
+    background-color: #1a365d;
+    color: #cbd5e0;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+    border-top: 4px solid #38a169;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #a0aec0;
+}

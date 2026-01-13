@@ -1,0 +1,9 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa a altura toda da tela */
+}
+
+.content {
+    flex: 1; /* Faz o conteúdo crescer e empurrar o footer para baixo */
+}

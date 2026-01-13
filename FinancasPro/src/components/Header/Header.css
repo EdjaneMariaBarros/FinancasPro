@@ -1,0 +1,21 @@
+header {
+    background-color: #1a365d;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #68d391; /* Verde claro ao passar o mouse */
+}

@@ -1,0 +1,87 @@
+.about-container {
+    max-width: 800px; /* Reduzi um pouco para focar no conteúdo central */
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.about-intro h1 {
+    color: #1a365d;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-intro p {
+    color: #4a5568;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+}
+
+.team-section h2 {
+    color: #2d3748;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.team-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #38a169;
+    margin: 10px auto;
+}
+
+/* AJUSTE NO GRID: Centraliza o card único */
+.team-grid {
+    display: flex;
+    justify-content: center; /* Centraliza o card horizontalmente */
+    margin-bottom: 4rem;
+}
+
+.team-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 20px; /* Bordas mais arredondadas */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra mais elegante */
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 350px; /* Define um tamanho ideal para um card único */
+    width: 100%;
+    border: 1px solid #e2e8f0;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.team-photo {
+    width: 150px; /* Aumentei um pouco a foto para destaque */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 4px solid #68d391;
+    box-shadow: 0 4px 10px rgba(104, 211, 145, 0.3);
+}
+
+.team-card h3 {
+    font-size: 1.3rem; /* Nome um pouco maior */
+    color: #1a365d;
+    margin-bottom: 0.5rem;
+}
+
+.team-card p {
+    color: #38a169; /* Profissão em verde para combinar com o tema */
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.project-info {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 2rem;
+    color: #a0aec0;
+    font-size: 0.85rem;
+}
