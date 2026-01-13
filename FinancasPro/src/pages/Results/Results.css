@@ -1,0 +1,105 @@
+.results-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333; /* Texto escuro para contraste em áreas claras, ou ajuste conforme seu fundo */
+}
+
+.results-container h1 {
+    color: #1a365d;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #68d391;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Card de Resultado */
+.result-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    border-left: 5px solid #68d391;
+}
+
+.result-card h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #1a365d;
+}
+
+.result-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Informações de Preço */
+.price-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.up {
+    color: #48bb78;
+    background: #f0fff4;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Botões de Ação */
+.result-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-details {
+    background-color: #1a365d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-details:hover {
+    background-color: #2b6cb0;
+}
+
+.btn-add {
+    background-color: #68d391;
+    color: #1a365d;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #48bb78;
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .result-actions {
+        flex-direction: column;
+    }
+    
+    .btn-details, .btn-add {
+        text-align: center;
+    }
+}

@@ -6,11 +6,12 @@ export default function Header() {
     <header className="main-header">
       <div className="header-container">
         <div className="logo">
-          <Link to="/">Finanças<span>Pro</span></Link>
+          <Link to="/"className="logo-link">Finanças<span>Pro</span></Link>
         </div>
         <nav className="nav-menu">
           <Link to="/">Home</Link>
           <Link to="/dashboard">Dashboard</Link>
+          <Link to="/portifolio">Portifólio</Link>
           <Link to="/dividends">Dividendos</Link>
           <Link to="/alerts">Alertas</Link>
           <Link to="/recommendations">IA</Link>

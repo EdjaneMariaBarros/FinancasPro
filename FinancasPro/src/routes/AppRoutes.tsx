@@ -8,7 +8,8 @@ import Alerts from "../pages/Alerts/Alerts";
 import Dividends from "../pages/Dividends/Dividends";
 import Recommendations from "../pages/Recommendations/Recommendations";
 import Signup from "../pages/Signup/Signup";
-
+import Portifolio from "../pages/Portifolio/Portifolio";
+import Results from "../pages/Results/Results";
 export default function AppRoutes(){
     return(
 
@@ -23,6 +24,8 @@ export default function AppRoutes(){
             <Route path="/recommendations" element={<Recommendations/>}/> 
             <Route path="/about" element={<About/>}/> 
              <Route path="/signup" element={<Signup />} />
+             <Route path="/portifolio" element={<Portifolio/>}/>
+             <Route path="/results" element={<Results />} />
         </Routes>
     )
 }
